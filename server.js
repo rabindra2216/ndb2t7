@@ -31,7 +31,7 @@ app.get("/employees", function (req, res) {
     });
 
     app.get("/employees/:empCode", function (req, res) { 
-            let empcode=+req.params.empCode;
+            let empcode=req.params.empCode;
             let product=employees.find(st=>st.empCode===empcode);
             if(product) res.send(product);
             else res.status(404).send('No Employee Found')
@@ -48,7 +48,7 @@ app.get("/employees", function (req, res) {
     
     app.put("/employees/:empCode",function(req,res){ 
         let body=req.body;
-        let id=+req.params.empCode;
+        let id=req.params.empCode;
         let index =employees.findIndex((st)=> st.empCode === id);
         if(index>=0){
         let updatedStudent = {...body };
@@ -59,7 +59,7 @@ app.get("/employees", function (req, res) {
         });
 
 app.delete("/employees/:empCode",function(req,res){
-    let id=+req.params.empCode;
+    let id=req.params.empCode;
        let index=employees.findIndex(st=>st.empCode===id);
         if (index>=0){
        let deletedEmp=employees.splice(index,1);
