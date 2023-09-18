@@ -18,5 +18,6 @@ const employees=[
     {empCode:"1276",name:"Barbara",department:"Technology",designation:"Trainee",salary:21800,gender:"Female"},
     {empCode:"1859",name:"Donna",department:"Operations",designation:"Trainee",salary:21900,gender:"Female"},
     {empCode:"1874",name:"Igor",department:"Operations",designation:"Manager",salary:48300,gender:"Male"},
+    {empCode:"1875",name:"Ram",department:"Operations",designation:"Manager",salary:25000,gender:"Male"}
     ]
     module.exports.employees=employees;

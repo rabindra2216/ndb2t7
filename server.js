@@ -63,7 +63,7 @@ app.delete("/employees/:empCode",function(req,res){
        let index=employees.findIndex(st=>st.empCode===id);
         if (index>=0){
        let deletedEmp=employees.splice(index,1);
-        res.status(404).send(deletedEmp);
+        res.send(deletedEmp);
         }
-        else res.send('Employee Not Found!')
+        else res.status(404).send('Employee Not Found!')
 });
